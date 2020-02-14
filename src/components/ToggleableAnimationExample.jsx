@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AnimationLearnParaneter from "./AnimationLearnParaneter";
+import AnimatedButton from "./AnimatedButton";
 
 export default class ToggleableAnimationExample extends Component {
   state = {
@@ -24,7 +25,7 @@ export default class ToggleableAnimationExample extends Component {
         <header>
           <h2>La animación está: {this.getAnimationEnabledDisplayText()}!</h2>
         </header>
-        <button onClick={this.toggleState}>Modificar</button>
+        <AnimatedButton callback={this.toggleState} txt={"CLICK"}/>
         <AnimationLearnParaneter enabled={this.state.toggledIn} />
       </div>
     );
